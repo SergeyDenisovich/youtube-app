@@ -1,0 +1,20 @@
+header.ant-layout-header {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+
+  & ul {
+    display: flex;
+    margin-right: auto;
+  }
+
+  & .logo {
+    width: 64px;
+    height: 64px;
+    background: url('../../assets/logo.svg') 0 0 no-repeat;
+  }
+
+  & button.ant-btn.ant-btn-text {
+    font-weight: 600;
+  }
+}

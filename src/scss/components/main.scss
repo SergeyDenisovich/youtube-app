@@ -1,0 +1,10 @@
+section.ant-layout {
+  main.ant-layout-content {
+    min-height: calc(100vh - 64px);
+
+    h3.ant-typography {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+}

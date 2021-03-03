@@ -1,4 +1,4 @@
-import { createSlice } from '@redux/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 export const querySlice = createSlice({
   name: 'queries',
