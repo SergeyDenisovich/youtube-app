@@ -4,12 +4,18 @@ import AppHeader from './components/AppHeader';
 import Login from './components/Login';
 import SearchPage from './pages/SearchPage';
 import SavedQuery from './pages/SavedQuery';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { onReload } from './app/auth-slice';
 
 function App() {
   const { Content } = Layout;
   const { token } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
 
+  if (localStorage.getItem('token')) {
+    const token = JSON.parse(localStorage.getItem('token'));
+    dispatch(onReload(token));
+  }
   return (
     <Router>
       {token !== null ? (
